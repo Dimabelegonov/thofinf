@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ language.name }}</h1>
+
+<h2>Страны</h2>
+<ul>
+    {% for country in countries %}
+    <li>{{ country.name }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Люди</h2>
+<ul>
+    {% for person in people %}
+    <li>{{ person.name }} ({{ person.birth_year }} - {{ person.death_year }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

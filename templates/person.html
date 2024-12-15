@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ person.name }}</h1>
+<p>Год рождения: {{ person.birth_year }}</p>
+<p>Год смерти: {{ person.death_year }}</p>
+
+<h2>Языки</h2>
+<ul>
+    {% for language in languages %}
+    <li>{{ language.name }}</li>
+    {% endfor %}
+</ul>
+
+<h2>События</h2>
+<ul>
+    {% for event in events %}
+    <li>{{ event.name }} ({{ event.start_year }} - {{ event.end_year }})</li>
+    {% endfor %}
+</ul>
+
+<h2>Страны</h2>
+<ul>
+    {% for country in countries %}
+    <li>{{ country.name }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
